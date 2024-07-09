@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.framer-course {
+/* .framer-course {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -13,4 +13,4 @@
     height: 100px;
     background-color: wheat;
   }
-}
+} */

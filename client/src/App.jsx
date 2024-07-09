@@ -1,13 +1,13 @@
 import React from "react";
 import "./app.scss";
 import { Navbar } from "./component";
-import Test from "./Test";
+// import Test from "./Test";
 
 const App = () => {
   return (
     <>
       <div>
-        {/* <section className="">
+        <section className="">
           <Navbar />
         </section>
         <section className="">Parallex</section>
@@ -17,8 +17,7 @@ const App = () => {
         <section className="">Portfolio2</section>
         <section className="">Portfolio3</section>
         <section className="">Portfolio4</section>
-        <section className="">contact</section> */}
-        <Test />
+        <section className="">contact</section>
       </div>
     </>
   );

@@ -1,22 +1,23 @@
 import React from "react";
 import "./navbar.scss";
 import { motion } from "framer-motion";
+import Sidebar from "../sidebar/Sidebar";
 
 const Navbar = () => {
   const Spanvariants = {
-    hidden: { opacity: 0 , scale : 0.5, y : 10},
-    visible: { opacity: 1, scale : 1, y : 0, transition: { duration: 0.6 } },
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
   };
   return (
     <>
       <div className="navbar">
-        {/* section */}
+        <Sidebar/>
         <div className="wrapper">
           <motion.span
             variants={Spanvariants}
             animate="visible"
             initial="hidden"
-            className="text-2xl font-semibold"
+            className="text-lg font-semibold"
           >
             Chakraborty
           </motion.span>

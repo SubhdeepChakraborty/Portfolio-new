@@ -23,20 +23,12 @@ const Navbar = () => {
           </motion.span>
           <div className="social">
             <a href="#">
-              <img src="" alt="" />
-              Links
+              <img src="/git.png" alt="Youtube" style={{
+                color: "white"
+              }} />
             </a>
             <a href="#">
-              <img src="" alt="" />
-              Links
-            </a>
-            <a href="#">
-              <img src="" alt="" />
-              Links
-            </a>
-            <a href="#">
-              <img src="" alt="" />
-              Links
+              <img src="/link.png" alt="Dribble" />
             </a>
           </div>
         </div>

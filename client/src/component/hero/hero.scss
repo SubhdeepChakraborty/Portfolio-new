@@ -1,0 +1,52 @@
+.hero{
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+
+    .wrapper{
+        height: 100%;
+        width: 70%;
+        margin: auto;
+
+        .text-container{
+            h2{
+                color: rebeccapurple;
+                letter-spacing: 10px;
+            }
+            h1{
+                font-size: 70px;
+            }
+            .buttons{
+                button{
+                    padding: 20px;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .image-container{
+        img{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .slidingText{
+        font-size: 50vh;
+        position: absolute;
+        bottom: -120px;
+        white-space: nowrap;
+        color: #ffffff09;
+        width: 50%;
+        // font-weight: bold;
+    }
+}

@@ -113,7 +113,7 @@ const Hero = () => {
       </div>
 
       {/* Sliding Text */}
-      <motion.div variants={sliderVariant} animate='animate' initial ='initial' className="slidingText">Backend - Frontend - Developer</motion.div>
+      <motion.div variants={sliderVariant} animate='animate' initial ='initial' className="slidingText z-[-1]">Backend - Frontend - Developer</motion.div>
 
       {/* Hero Image */}
       <div className="image-container">

@@ -1,6 +1,6 @@
 import React from "react";
 import "./app.scss";
-import { Hero, Navbar } from "./component";
+import { Hero, Navbar, Parallex, Services } from "./component";
 // import Test from "./Test";
 
 const App = () => {
@@ -9,18 +9,23 @@ const App = () => {
       <div>
         <section id="Homepage" className="">
           <Navbar />
-          <Hero/>
+          <Hero />
         </section>
         <section id="Services" className="">
-          Parallex
+          <Parallex type="Portfolio" />
         </section>
         <section id="Portfolio" className="">
-          Services
+          <Services />
+        </section>
+        <section id="Services" className="">
+          <Parallex type="Services" />
         </section>
         <section id="About" className="">
           Parallex
         </section>
-        <section id="Contact" className="">contact</section>
+        <section id="Contact" className="">
+          contact
+        </section>
       </div>
     </>
   );

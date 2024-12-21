@@ -79,7 +79,7 @@ const Hero = () => {
 
           {/* Heading 1 */}
           <motion.h1 variants={textVariants} className="w-[100%]">
-            Mern Stack and UI Developer
+            Mern Stack
           </motion.h1>
 
           {/* Buttons */}

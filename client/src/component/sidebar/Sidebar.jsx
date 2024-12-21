@@ -13,6 +13,7 @@ const Sidebar = () => {
        transition: {
          duration: 1,
          ease: [0.6, -0.05, 0.01, 0.99],
+         
        },
      },
      closed: {
@@ -20,7 +21,7 @@ const Sidebar = () => {
        transition: {
          duration: 1,
          ease: [0.6, -0.05, 0.01, 0.99],
-        //  delay: 0.3,
+         delay: 0.3,
        },
      },
    };

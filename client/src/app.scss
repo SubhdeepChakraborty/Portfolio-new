@@ -3,10 +3,10 @@ section {
   scroll-snap-align: center;
 }
 
-// html {
-//   scroll-snap-type: y mandatory;
+html {
+  overscroll-behavior-y: none;
 //   scroll-behavior: smooth;
-// }
+}
 
 body{
     background-color: #0c0c1d;
@@ -27,3 +27,4 @@ a{
   box-sizing: border-box;
   font-family: "DM sans", sans-serif;
 }
+

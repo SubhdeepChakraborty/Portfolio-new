@@ -80,7 +80,7 @@
 
 import React, { useRef, useEffect } from "react";
 import "./app.scss";
-import { Hero, Navbar, Parallex, Services, UseWindowSize } from "./component";
+import { Hero, Navbar, Parallex, Services} from "./component";
 
 const App = () => {
   return (

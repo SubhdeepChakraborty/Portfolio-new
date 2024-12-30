@@ -4,8 +4,9 @@ section {
 }
 
 html {
-  overscroll-behavior-y: none;
-//   scroll-behavior: smooth;
+  // overscroll-behavior-y: none;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body{

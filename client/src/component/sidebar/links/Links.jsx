@@ -38,7 +38,7 @@ export const Links = () => {
           }} whileTap={{
             scale : 0.95
         }} >
-          <Link className="cursor-pointer" to={e} duration={1} key={i}>
+          <Link className="cursor-pointer" to={e} duration={1} key={i} smooth={true}>
             {e}
           </Link>
         </motion.div>

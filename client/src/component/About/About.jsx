@@ -1,9 +1,64 @@
 import React, { useRef } from "react";
 import "./about.scss";
-import {motion, useScroll, useSpring} from "framer-motion"
+import {motion, useScroll, useSpring, useTransform} from "framer-motion"
 
 const Single = ({ item }) => {
-  return <section>{item.title}</section>;
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"], // Ensures smooth scrolling effect
+  });
+
+  // Transform the scroll progress to translate Y movement
+  const yTransform = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  // Apply useSpring for smooth motion
+  const smoothY = useSpring(yTransform, {
+    stiffness: 80, // Lower value = slower movement
+    damping: 20, // Higher value = less bounce
+    mass: 0.5, // Controls the weight of the animation
+  });
+
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  const smoothOpacity = useSpring(opacityTransform, {
+    stiffness: 100,
+    damping: 25,
+  });
+
+  // Image animation (moves slightly for parallax effect & fades in)
+  const yImage = useTransform(scrollYProgress, [0, 1], [-50, 50]); // Less movement than text
+  const smoothYImage = useSpring(yImage, { stiffness: 100, damping: 50 });
+  // const opacityImage = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  // const smoothOpacityImage = useSpring(opacityImage, {
+  //   stiffness: 100,
+  //   damping: 25,
+  // });
+
+  return (
+    <section>
+      <div className="container-div overflow-hidden">
+        <div className="wrapper-div">
+          <div className="w-[80%] flex items-center justify-center gap-10">
+            <motion.div
+              className="imgContainer rounded-sm"
+              ref={ref}
+              style={{ y: smoothYImage }}
+            >
+              <img src={item.img} alt="image" />
+            </motion.div>
+            <motion.div
+              className="text-div"
+              style={{ y: smoothY, opacity: smoothOpacity }}
+            >
+              <h2>{item.title}</h2>
+              <p>{item.desc}</p>
+              <button>See Demo</button>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 const About = () => {

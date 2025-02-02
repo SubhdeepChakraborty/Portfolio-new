@@ -1,0 +1,132 @@
+.contact {
+  height: 100%;
+  max-width: 80%;
+  margin: auto;
+  padding: 20px; // Add padding for smaller screens
+  display: flex;
+  flex-wrap: wrap; // Allow wrapping for responsiveness
+  align-items: center;
+  gap: 10px;
+//   overflow: hidden;
+  .textContainer {
+    flex: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 60px; // Responsive font size
+      line-height: 1.2;
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    .item {
+      h2 {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      width: 100%; // Scale SVG for responsiveness
+      max-width: 300px;
+      z-index: -1;
+      opacity: 0.2; // Fade effect for better visual
+    }
+
+    form {
+      width: 100%; // Full width for smaller screens
+      max-width: 400px; // Limit form width on larger screens
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input,
+      textarea {
+        padding: 15px;
+        font-size: 14px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+        outline: none;
+
+        &:focus {
+          border-color: orange;
+        }
+      }
+
+      button {
+        padding: 15px;
+        border: none;
+        background-color: orange;
+        cursor: pointer;
+        font-weight: 500;
+        color: black;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darkorange;
+        }
+      }
+    }
+  }
+
+  // Responsive adjustments
+//   @media (max-width: 768px) {
+//     flex-direction: column;
+
+//     .textContainer {
+//       text-align: center;
+//       gap: 10px;
+
+//       h1 {
+//         font-size: clamp(30px, 6vw, 60px);
+//       }
+
+//       .item {
+//         h2 {
+//           font-size: 16px;
+//         }
+
+//         span {
+//           font-size: 14px;
+//         }
+//       }
+//     }
+
+//     .formContainer {
+//       form {
+//         input,
+//         textarea {
+//           font-size: 12px;
+//         }
+
+//         button {
+//           font-size: 14px;
+//         }
+//       }
+//     }
+//   }
+}

@@ -4,5 +4,6 @@ import Parallex from "./parallex/Parallex";
 import Services from "./Services/Services";
 import SmoothScroll from "./hooks/SmoothScroll";
 import About from "./About/About";
+import Contact from "./Contact/Contact";
 
-export { Parallex, Navbar, Hero, Services, SmoothScroll, About };
+export { Parallex, Navbar, Hero, Services, SmoothScroll, About, Contact };

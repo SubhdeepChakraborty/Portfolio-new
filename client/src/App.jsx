@@ -80,7 +80,7 @@
 
 import React, { useRef, useEffect } from "react";
 import "./app.scss";
-import { About, Hero, Navbar, Parallex, Services} from "./component";
+import { About, Contact, Hero, Navbar, Parallex, Services} from "./component";
 
 const App = () => {
   return (
@@ -101,7 +101,7 @@ const App = () => {
       </section>
       <About/>
       <section id="Contact">
-        contact
+      <Contact />
       </section>
     </div>
   );

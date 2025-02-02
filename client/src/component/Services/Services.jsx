@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./services.scss";
 import { useInView, motion } from "framer-motion";
+import { Dock } from "../Fun";
 
 const Services = () => {
   const listenRef = useRef();
@@ -24,7 +25,8 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={varients}>
         <p>
-          I focus on helping your brand grow <br /> and move forward
+          I build seamless and modern web experiences <br /> that move your
+          vision forward.
         </p>
         <hr />
       </motion.div>
@@ -36,9 +38,9 @@ const Services = () => {
               whileHover={{ color: "orange" }}
               className="transition-colors"
             >
-              Unique
+              Design
             </motion.b>{" "}
-            Ideas
+            Addict
           </h1>
         </div>
         <div className="title">
@@ -47,15 +49,15 @@ const Services = () => {
               whileHover={{ color: "orange" }}
               className="transition-colors"
             >
-              For Your
+              Abstract
             </motion.b>{" "}
-            Buisness
+            Thinker.
           </h1>
-          <button> WHAT WE DO? </button>
+          <button> Tech Stack? </button>
         </div>
       </motion.div>
-      <motion.div variants={varients} className="listContainer">
-        <motion.div
+      <motion.div variants={varients} className="relative listContainer">
+        {/* <motion.div
           whileHover={{
             backgroundColor: "lightgray",
             color: "black",
@@ -122,7 +124,8 @@ const Services = () => {
             only five centuries.
           </p>
           <button className="font-medium cursor-pointer">Go</button>
-        </motion.div>
+        </motion.div> */}
+        <Dock collapsible={false} position="" responsive="bottom" />
       </motion.div>
     </motion.div>
   );

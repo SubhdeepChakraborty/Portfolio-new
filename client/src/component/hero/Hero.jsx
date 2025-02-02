@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./hero.scss";
 import { animate, motion } from "framer-motion";
+import { VariableProximity, ShinyText } from "../Fun";
 
 // Text variants for the headings and buttons
 const textVariants = {
@@ -60,6 +61,7 @@ const sliderVariant = {
 }
 
 const Hero = () => {
+  const containerRef = useRef(null);
   return (
     <div className="hero">
       <div className="wrapper">
@@ -73,13 +75,34 @@ const Hero = () => {
           <motion.h2
             variants={textVariants} // Apply staggered text animation
             className="text-4xl w-[100%] text-ellipsis text-nowrap"
+            ref={containerRef}
           >
-            Subhadeep Chakraborty
+            <VariableProximity
+              label={"Subhadeep Chakraborty"}
+              className={"variable-proximity-demo"}
+              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+              containerRef={containerRef}
+              radius={100}
+              falloff="linear"
+            />
           </motion.h2>
 
           {/* Heading 1 */}
-          <motion.h1 variants={textVariants} className="w-[100%]">
-            Mern Stack
+          <motion.h1
+            variants={textVariants}
+            className="w-[100%]"
+            ref={containerRef}
+          >
+            <VariableProximity
+              label={"Mern Stack"}
+              className={"variable-proximity-demo"}
+              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+              containerRef={containerRef}
+              radius={100}
+              falloff="linear"
+            />
           </motion.h1>
 
           {/* Buttons */}
@@ -88,11 +111,16 @@ const Hero = () => {
               variants={textVariants} // Button uses the same animation
               className="bg-transparent text-white"
             >
-              See the latest works
+              <ShinyText
+                text="See the latest works"
+                disabled={false}
+                speed={3}
+                className="custom-class"
+              />
             </motion.button>
             <motion.button
               variants={textVariants} // Button uses the same animation
-              className="bg-white text-black"
+              className="bg-white text-black font-extrabold"
             >
               Contact me
             </motion.button>
@@ -113,7 +141,14 @@ const Hero = () => {
       </div>
 
       {/* Sliding Text */}
-      <motion.div variants={sliderVariant} animate='animate' initial ='initial' className="slidingText z-[-1]">Backend - Frontend - Developer</motion.div>
+      <motion.div
+        variants={sliderVariant}
+        animate="animate"
+        initial="initial"
+        className="slidingText z-[-1]"
+      >
+        Backend - Frontend - Developer
+      </motion.div>
 
       {/* Hero Image */}
       <div className="image-container">
